@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trick Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Stich-Tracker</h1>
+
+    <fieldset>
+        <legend>Anzahl Spieler:</legend>
+        <label><input type="radio" name="player-count" value="2" checked /> 2</label>
+        <label><input type="radio" name="player-count" value="3" /> 3</label>
+        <label><input type="radio" name="player-count" value="4" /> 4</label>
+        <label><input type="radio" name="player-count" value="5" /> 5</label>
+        <label><input type="radio" name="player-count" value="6" /> 6</label>
+    </fieldset>
+
+    <div id="names-container"></div>
+    <button id="start-btn">Spiel starten</button>
+    <div id="table-container"></div>
+
+    <button id="evaluate-btn" style="display:none;">Runde auswerten</button>
+    <div id="results-table-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

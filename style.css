@@ -1,0 +1,130 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e3f2fd;
+  margin: 40px 20px;
+  color: #424242;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+  color: #ff6f61;
+  text-align: center;
+}
+
+.results-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background-color: white;
+}
+
+.results-table caption {
+  caption-side: top;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 16px 0;
+  color: #ff6f61;
+}
+
+.results-table th,
+.results-table td {
+  padding: 14px 20px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1rem;
+}
+
+.results-table thead th {
+  background-color: #ff6f61;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.results-table tbody tr:nth-child(even) {
+  background-color: #f9fbe7; /* ganz helles gelbgrün */
+}
+
+.results-table tbody tr:hover {
+  background-color: #aed581;
+  color: #263238;
+  transition: background-color 0.3s ease;
+}
+
+.results-table td.points {
+  background-color: #ffd54f;
+  font-weight: 700;
+  color: #424242;
+  border-radius: 6px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .results-table {
+    max-width: 100%;
+  }
+
+  .results-table th,
+  .results-table td {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-table,
+  .results-table thead,
+  .results-table tbody,
+  .results-table th,
+  .results-table td,
+  .results-table tr {
+    display: block;
+  }
+
+  .results-table thead {
+    display: none;
+  }
+
+  .results-table tr {
+    margin-bottom: 18px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 12px 10px;
+  }
+
+  .results-table td {
+    text-align: right;
+    /* Padding: oben 10px, rechts 15px, unten 10px, links 50% wegen label */
+    padding: 10px 15px 10px 50%;
+    position: relative;
+    border: none;
+    font-size: 0.95rem;
+  }
+
+  .results-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    padding-left: 15px;
+    font-weight: 700;
+    color: #ff6f61;
+    text-align: left;
+  }
+
+  .results-table td.points {
+    background-color: #fff176;
+    border-radius: 6px;
+    font-weight: 700;
+  }
+}
+
+
